@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+.force-row{
+  display: flex;
+  flex-flow: row nowrap;
+}

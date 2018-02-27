@@ -5,10 +5,10 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+import {Theme} from './configuration/theme'
 
 const AppWrapper = (
-    <MuiThemeProvider>
+    <MuiThemeProvider muiTheme={Theme}>
         <App />
     </MuiThemeProvider>
 )

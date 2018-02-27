@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField'
 import { SubmitButton } from '../Buttons'
-import './forms.css'
 
 export default class extends Component {
     constructor(props) {

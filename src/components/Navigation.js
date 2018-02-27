@@ -23,7 +23,7 @@ export default class extends Component {
                 <AppBar title="React-Forms"
                     onLeftIconButtonClick={this.toggleDrawer}
                     iconElementRight={
-                        <span>
+                        <span className="force-row">
                             <DrawerButton secondary={true} label='Drawer' display={<LoginForm />} />
                             <ModalButton secondary={true} label='Modal' display={<LoginForm />} />
                         </span>

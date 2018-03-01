@@ -8,9 +8,8 @@ import Dialog from 'material-ui/Dialog'
 //submit button for forms 
 export const SubmitButton = () => <RaisedButton primary={true} type='submit' label='Submit' />
 
-//knows how to open/close a modal
-//as well as pass another component
-//to display on the modal
+//toggles a drawer
+//pass drawer a component to display
 export class DrawerButton extends Component {
     constructor(props) {
         super(props)
@@ -33,6 +32,8 @@ export class DrawerButton extends Component {
     }
 }
 
+//toggles a modal (popup)
+//passes modal a component to display
 export class ModalButton extends Component {
     constructor(props) {
         super(props)

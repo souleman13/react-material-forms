@@ -6,7 +6,9 @@ export default class extends Component {
     return (
       <div>
         <h2>Please Login!</h2>
-        <LoginForm/>
+        <LoginForm />
+        <a href='/user/reset'>Reset Password</a>
+        <a href='/user/signup'>Sign-Up</a>
       </div>
     )
   }

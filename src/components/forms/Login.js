@@ -21,8 +21,6 @@ export default class extends Component {
                 <TextField required floatingLabelText={`Email`} onChange={(e) => this.setState({ pw: e.target.value })} />
                 <TextField required floatingLabelText={`Password`} onChange={(e) => this.setState({ pw: e.target.value })} />
                 <SubmitButton />
-                <a href='/user/reset'>Reset Password</a>
-                <a href='/user/signup'>Sign-Up</a>
             </form>
         )
     }

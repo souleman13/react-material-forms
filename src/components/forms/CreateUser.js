@@ -21,8 +21,8 @@ export default class extends Component {
             S: ''
         }
     }
-    submitForm = (e) => {
-        e.preventDefault() //this stops the page from redireting when you hit submit
+
+    submitForm = () => {
         console.log(this.state)
         alert(`Thanks for creating an account!`)
         //uncomment the next line to redirect to login post submit
@@ -31,7 +31,10 @@ export default class extends Component {
 
     render() {
         return (
-            <form onSubmit={e => { this.submitForm(e) }}>
+            <form onSubmit={e => {
+                e.preventDefault() //this stops the page from redireting when you hit submit
+                this.submitForm()
+            }}>
                 <TextField required floatingLabelText={`Firstname`} onChange={e => this.setState({ Firstname: e.target.value })} />
                 <TextField required floatingLabelText={`Lastname`} onChange={e => this.setState({ Lastname: e.target.value })} />
                 <TextField required floatingLabelText={`Email`} onChange={e => this.setState({ email: e.target.value })} />
@@ -39,16 +42,16 @@ export default class extends Component {
                 {/* DoB datepicker, note this saves the date as a dateTime object type
                 this value is usable, but for this example i use .toString() method to change
                 the data type to string just before it is assigned to state*/}
-                <DatePicker hintText="Date of Birth" mode="landscape" onChange={(e, date) => this.setState({dob: date.toString()})} />
-                
+                <DatePicker hintText="Date of Birth" mode="landscape" onChange={(e, date) => this.setState({ dob: date.toString() })} />
+
                 {/* country dropdown, onChange func is slightly different here,
                 cant use 'state' as variable name here, it is an overloaded word */}
                 <SelectField
                     floatingLabelText="State"
                     value={this.state.S}
-                    onChange={(e,i,value) => this.setState({ S: value })}>
+                    onChange={(e, i, value) => this.setState({ S: value })}>
                     <MenuItem value={null} primaryText="Click to Select" />
-                    {states.map(s =><MenuItem key={s.abbreviation} value={s.name} primaryText={s.name}/>)}
+                    {states.map(s => <MenuItem key={s.abbreviation} value={s.name} primaryText={s.name} />)}
                 </SelectField>
                 <SubmitButton />
             </form>

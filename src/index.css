@@ -1,4 +1,10 @@
 /* cc for element */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 form {
   display: flex;
   flex-flow: column nowrap;

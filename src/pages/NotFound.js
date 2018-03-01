@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class extends Component {
   render() {
     return (
-      <div>
+      <main>
         Error 404 Page Not Found
-      </div>
+      </main>
     );
   }
 }

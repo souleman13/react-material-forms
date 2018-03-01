@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class extends Component {
   render() {
     return (
-      <div>
+      <main>
         Dashboard or Homepage
-      </div>
+      </main>
     );
   }
 }
